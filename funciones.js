@@ -15,7 +15,7 @@ voy_principio = false;
 
 $(document).ready(function() {
     map = L.map('map').setView([0, 0], 2);
-    L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', { //para mapquest: http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png -- http://{s}.tile.osm.org/{z}/{x}/{y}.png
+    L.tileLayer('http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', { //para mapquest-openstreetmap: http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png -- http://{s}.tile.osm.org/{z}/{x}/{y}.png
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
     
@@ -59,7 +59,7 @@ $(document).ready(function() {
             history.pushState({juego: juego, dificultad: dificultad, puntos: puntos}, "", "?juego="+juego+"&dificultad="+dificultad+"&puntos="+puntos);
             var fecha = new Date().toJSON().slice(0,19)
             situacion_ahora++;
-            $("#history").append("<li><a href=javascript:vueltahistorial(" + situacion_ahora + ")>Juego: " + juego + ", dificultad: " + dificultad + ", puntuacion: " + puntos + ", fecha: " + fecha + "</a></li>")
+            $("#history").append("<li><a href=javascript:vueltahistorial(" + situacion_ahora + ")>Juego: " + juego + ", dificultad: " + dificultad + "ms, puntuacion: " + puntos + ", fecha: " + fecha + "</a></li>")
             num_jugados++;
             /////////////////////////////////////////////////////////////////////7
             
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
     window.onpopstate = function(event) {
         if(!voy_principio){
-            alert("Usted jugó " + event.state.juego + " en modo " + event.state.dificultad + " obteniendo "  + event.state.puntos + " puntos.\nJuegue otra vez para superarse!!!!")
+            alert("Usted jugó " + event.state.juego + " en modo " + event.state.dificultad + "ms obteniendo "  + event.state.puntos + " puntos.\nJuegue otra vez para superarse!!!!")
             pararjuego();
             juego = event.state.juego;
             dificultad = event.state.dificultad;
@@ -109,7 +109,7 @@ function vueltahistorial(lugar){
     situacion_ahora = lugar
     //console.log(history.state);
     if (destino == 0){
-        alert("Usted jugó " + history.state.juego + " en modo " + history.state.dificultad + " obteniendo "  + history.state.puntos + " puntos.\nJuegue otra vez para superarse!!!!")
+        alert("Usted jugó " + history.state.juego + " en modo " + history.state.dificultad + "ms obteniendo "  + history.state.puntos + " puntos.\nJuegue otra vez para superarse!!!!")
         //alert("Ya se encuentra en ese juego");
         juego = history.state.juego;
         dificultad = history.state.dificultad;
@@ -203,7 +203,7 @@ function comenzarJuego(){
         if(!juego || !dificultad){
             alert("Debes seleccionar juego y dificultad"); 
         }else{
-            alert("Va a jugar a " + juego + " en modo " + dificultad);
+            alert("Va a jugar a " + juego + " en modo " + dificultad + "ms");
                         
             url = "geoJSON/" + juego + ".json"
             $.getJSON(url).done(function( data ) {

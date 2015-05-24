@@ -1,0 +1,17 @@
+{
+     "name": "Adivina",
+     "description": "Juego Adivina para firefox OS",
+     "launch_path": "/index.html",
+     "version": "1.0",
+     "developer": {
+          "name": "David Moreno",
+          "url": "http://github.com/dlumbrer"
+     },
+     "icons": {
+      "16": "/images/icon.png",
+      "48": "/images/icon.png",
+      "128": "/images/icon.png"
+     },
+     "default_locale": "en"
+}
+
