@@ -1,0 +1,50 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [40.418889, -3.691944]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "madrid ciudad",
+                            "solucion": "Madrid (España)"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [39.866667, 32.866667]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "ankara",
+                            "solucion": "Ankara (Turquía)"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [35.683889, 139.774444]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "tokio",
+                            "solucion": "Tokio (Japón)"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [-33.925, 18.425]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "Cape Town",
+                            "solucion": "Ciudad del Cabo (Sudáfrica)"
+                }
+            }            
+	]
+}
+

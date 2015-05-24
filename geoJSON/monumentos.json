@@ -1,0 +1,50 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [37.923056, 29.123889]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "Pamukkale",
+                            "solucion": "Pamukkale (Turquía)"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [20.214722, -87.428889]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "Tulum mexico",
+                            "solucion": "Tulum (México)"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [43.3825, -4.116111]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "cueva de altamira",
+                            "solucion": "Cueva de Altamira (España)"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [40.689167, -74.044444]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "statue liberty",
+                            "solucion": "Estatua de la Libertad (Nueva York)"
+                }
+            }            
+	]
+}
+

@@ -1,0 +1,49 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [37.356403, -5.981611]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "betis",
+                            "solucion": "Real Betis Balompie"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [19.302778, -99.150556]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "Club América",
+                            "solucion": "Club América"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [53.430819, -2.960828]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "liverpool football",
+                            "solucion": "Liverpool Football Club"
+                }
+            },
+            {
+                "geometry": {
+                            "type": "Point",
+                            "coordinates": [41.102861, 28.990417]
+                },
+                "type": "Feature",
+                "properties": {
+                            "tag": "galatasaray",
+                            "solucion": "Galatasaray Spor Kulübü"
+                }
+            }            
+	]
+}
