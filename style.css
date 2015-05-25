@@ -99,9 +99,10 @@ A:hover {text-decoration:underline;color:rgba(255,175,77,1);}
 
 
 .img{
-    margin: 0 auto;
-    height:50%;
-    width:50%;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }
 
 #title{
@@ -122,3 +123,5 @@ A:hover {text-decoration:underline;color:rgba(255,175,77,1);}
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4d', endColorstr='#e95a3a', GradientType=0 );
 
 }
+
+
