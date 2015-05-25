@@ -64,6 +64,8 @@ $(document).ready(function() {
             /////////////////////////////////////////////////////////////////////7
             
             $("#start").fadeIn()
+            $("#tipo").fadeIn()
+            $("#dificultad").fadeIn()
             $("#stop").fadeOut()
             juego = undefined
             dificultad = undefined
@@ -123,6 +125,8 @@ function vueltahistorial(lugar){
 
 function pararjuego(){
     $("#start").fadeIn()
+    $("#tipo").fadeIn()
+    $("#dificultad").fadeIn()
     $("#stop").fadeOut()
     dificultad=undefined; 
     juego=undefined; 
@@ -221,6 +225,8 @@ function comenzarJuego(){
 
                 juego_en_curso = true;
                 $("#start").fadeOut()
+                $("#tipo").fadeOut()
+                $("#dificultad").fadeOut()
                 $("#stop").fadeIn()
                 $("#fotos").empty();
                 $("#puntuacion").html("<h2>Aqui se mostrará su puntuación y distancia a la solución</h2>")
