@@ -56,7 +56,7 @@ $(document).ready(function() {
                 voy_principio = true;
                 history.go(principio) // para ir al principio
             }
-            history.pushState({juego: juego, dificultad: dificultad, puntos: puntos}, "", "?juego="+juego+"&dificultad="+dificultad+"&puntos="+puntos);
+            history.pushState({juego: juego, dificultad: dificultad, puntos: puntos, lugar: situacion_ahora}, "", "?juego="+juego+"&dificultad="+dificultad+"&puntos="+puntos);
             var fecha = new Date().toJSON().slice(0,19)
             situacion_ahora++;
             $("#history").append("<li><a href=javascript:vueltahistorial(" + situacion_ahora + ")>Juego: " + juego + ", dificultad: " + dificultad + "ms, puntuacion: " + puntos + ", fecha: " + fecha + "</a></li>")
@@ -93,10 +93,12 @@ $(document).ready(function() {
             pararjuego();
             juego = event.state.juego;
             dificultad = event.state.dificultad;
+            situacion_ahora = event.state.lugar +1;
             comenzarJuego();
         }else{ // si he vuelto al principio
             //alert("HAS VUELTO AL PRINCIPIO")
             voy_principio = false;
+            
         }
         //alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
         //$("#history").html($("#history").html() + "tete")
@@ -115,7 +117,11 @@ function vueltahistorial(lugar){
         //alert("Ya se encuentra en ese juego");
         juego = history.state.juego;
         dificultad = history.state.dificultad;
-        comenzarJuego();
+        if(juego_en_curso){
+            alert("Estas jugando ya a este juego!!!")
+        }else{
+            comenzarJuego();
+        }
     }else{
         //alert("Te vas al " + destino);
         history.go(destino);
